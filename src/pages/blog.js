@@ -28,21 +28,8 @@ class BlogIndex extends React.Component {
               })}
             </ul>
           </div>
-          {renderCloudinaryImages(posts)}
         </div>
       </Layout>
-    );
-  }
-}
-
-function renderCloudinaryImages(post) {
-  if (post.cloudinaryImage) {
-    return (
-      <div>
-        {post.cloudinaryImage.map((i) => (
-          <img src={i.secure_url} />
-        ))}
-      </div>
     );
   }
 }
@@ -63,9 +50,7 @@ export const pageQuery = graphql`
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
-          cloudinaryImage {
-            secure_url
-          }
+
           description {
             childMarkdownRemark {
               html
