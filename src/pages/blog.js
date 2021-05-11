@@ -28,7 +28,7 @@ class BlogIndex extends React.Component {
               })}
             </ul>
           </div>
-          {renderCloudinaryImages(post)}
+          {renderCloudinaryImages(posts)}
         </div>
       </Layout>
     );
