@@ -47,10 +47,12 @@ class BlogPostTemplate extends React.Component {
 
 function renderCloudinaryImages(post) {
   if (post.cloudinaryImage) {
+    console.log(i.secure_url);
     return (
       <div>
         {post.cloudinaryImage.map((i) => (
           //<img src={i.secure_url} />
+
           <video width="628" controls src={i.secure_url} />
         ))}
       </div>
