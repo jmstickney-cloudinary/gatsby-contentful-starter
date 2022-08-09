@@ -51,7 +51,6 @@ function renderCloudinaryImages(post) {
       <div>
         {post.cloudinaryImage.map((i) => (
           //<img src={i.secure_url} />
-
           <video width="628" controls src={i.secure_url} />
         ))}
       </div>
